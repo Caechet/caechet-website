@@ -132,6 +132,9 @@ export default function Home() {
       {/* STATS */}
       <section className="stats">
         <div className="wrap">
+          <div className="sec-header">
+            <div className="left"><h3>The Receipts</h3></div>
+          </div>
           <div className="stat-row">
             <div className="big">$100<sup>M+</sup></div>
             <div className="desc"><b>Lifecycle revenue, tracked.</b> Across 70+ DTC brands. 11 years of practice.</div>
@@ -150,6 +153,13 @@ export default function Home() {
       {/* SERVICES */}
       <section className="services" id="services">
         <div className="wrap">
+          <div className="sec-header">
+            <div className="left">
+              <h3>What We Run</h3>
+              <span className="mono up" style={{fontSize:'11px',color:'var(--cobalt)',opacity:.7}}>Four channels · one engine</span>
+            </div>
+            <div className="right"><span className="stamp">Full Lifecycle</span></div>
+          </div>
           <div className="svc-list">
             <div className="svc-row">
               <span className="svc-name">Email <span className="desc">Campaigns + flows. The compounding core — where 20%+ of revenue should live.</span></span>
@@ -174,6 +184,12 @@ export default function Home() {
       {/* WORK */}
       <section className="receipts sec-pad" id="work">
         <div className="wrap">
+          <div className="sec-header">
+            <div className="left">
+              <h3>Selected Work</h3>
+              <span className="mono up" style={{fontSize:'11px',color:'var(--cobalt)',opacity:.7}}>Four brands · real results</span>
+            </div>
+          </div>
           <div className="work-grid">
             <article className="case">
               <div className="case-artifact">

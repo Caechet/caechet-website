@@ -227,7 +227,7 @@ svg { display:block; }
 .stats .sec-header .left .ref { color:var(--banana); opacity:.7; }
 .stats .stamp { background:transparent; border-color:var(--banana); color:var(--banana); }
 .stat-row {
-  display:grid; grid-template-columns:140px 1fr 280px; gap:48px;
+  display:grid; grid-template-columns:1fr 320px; gap:48px;
   padding:56px 0; border-top:1px solid rgba(252,241,184,.18); align-items:start;
 }
 .stat-row:last-child { border-bottom:1px solid rgba(252,241,184,.18); }
