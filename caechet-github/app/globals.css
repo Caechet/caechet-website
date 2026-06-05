@@ -718,7 +718,9 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
 
   /* --- Shared section spacing --- */
   .sec-pad { padding:72px 0; }
-  .sec-header { margin-bottom:48px; }
+  .sec-header { margin-bottom:40px; }
+  /* Services has a border-top svc-list immediately after â€” kill the gap so borders don't double up */
+  .services .sec-header { margin-bottom:0; }
   .stats,
   .services,
   .receipts,
@@ -731,6 +733,16 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
 
   /* --- Nav (already handles mobile at 960px, fine-tune) --- */
   .nav { padding:12px 20px; gap:14px; }
+
+  /* --- Marquee: faster scroll + fix wrapping label --- */
+  .marquee-track { animation-duration:22s; }
+  .marquee-label {
+    flex-direction:column; gap:2px;
+    padding:0 20px; margin-bottom:24px;
+  }
+  .marquee-label .right { display:none; }
+  .marquee-track img { height:34px; }
+  .marquee-track { gap:60px; }
 
   /* --- Hero --- */
   .hero {
@@ -771,6 +783,8 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   .lookbook-intro { margin-bottom:40px; gap:20px; }
   .lookbook-intro h4 { font-size:clamp(32px, 8vw, 56px); }
   .lookbook-intro .meta { min-width:unset; text-align:left; }
+  /* Fix phone scroll: 564px was desktop screen height â€” mobile phone is 500px so screen â‰ˆ 484px */
+  .phone .scroll { animation-name:phoneScrollMobile; animation-duration:16s; }
 
   /* --- Quote band --- */
   .quote-band { padding:80px 0; }
@@ -839,6 +853,11 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
 }
 
 /* Extra small â€” 430px and below (iPhone SE, older devices) */
+@keyframes phoneScrollMobile {
+  0%, 6%   { transform:translateY(0); }
+  46%, 54% { transform:translateY(calc(-100% + 484px)); }
+  94%, 100%{ transform:translateY(0); }
+}
 @media (max-width:430px) {
   .hero-wordmark { font-size:clamp(76px, 23vw, 110px); }
   .foot-grid { grid-template-columns:1fr; gap:32px; }
