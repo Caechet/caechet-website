@@ -398,7 +398,7 @@ svg { display:block; }
   letter-spacing:.18em; text-transform:uppercase; color:var(--banana); opacity:.75; flex-wrap:wrap;
 }
 .lookbook-foot .scroll-hint { display:inline-flex; align-items:center; gap:14px; }
-.lookbook-foot .scroll-hint::after { content:'↦'; font-family:'Inter',sans-serif; font-weight:900; font-size:18px; }
+.lookbook-foot .scroll-hint::after { content:'â†¦'; font-family:'Inter',sans-serif; font-weight:900; font-size:18px; }
 @media (max-width:720px) {
   .lookbook-track { padding:24px 24px 48px; margin:0 -24px; }
   .phone { width:240px; height:500px; }
@@ -527,6 +527,10 @@ footer { background:var(--cobalt); color:var(--banana); padding:80px 0 28px; }
 .foot-col a:hover { opacity:.7; }
 .foot-bot { padding-top:28px; border-top:1px solid rgba(252,241,184,.22); display:flex; justify-content:space-between; flex-wrap:wrap; gap:18px; font-family:'Lato', sans-serif; font-size:10px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--banana); opacity:.7; }
 @media (max-width:840px) { .foot-grid { grid-template-columns:1fr 1fr; } }
+
+/* Home page lookbook: reverse direction so animation starts from bottom of email
+   (content-rich) instead of top (white headers). Applies on all screen sizes. */
+.lookbook-home .phone .scroll { animation-direction: reverse; }
 
 /* === Helpers === */
 .reveal { opacity:0; transform:translateY(20px); animation:reveal 1s cubic-bezier(.2,.7,.2,1) forwards; }
@@ -680,7 +684,7 @@ footer { background:var(--cobalt); color:var(--banana); padding:80px 0 28px; }
 .offer-sub { font-size:15px; line-height:1.6; color:var(--ink); margin-top:20px; opacity:.8; max-width:460px; }
 .offer-list { list-style:none; display:flex; flex-direction:column; gap:0; margin-top:32px; border-top:1px solid var(--cobalt); }
 .offer-list li { padding:14px 0; border-bottom:1px solid rgba(32,72,200,.15); font-size:15px; color:var(--ink); font-weight:500; display:flex; align-items:flex-start; gap:10px; }
-.offer-list li::before { content:'→'; color:var(--cobalt); font-weight:700; flex-shrink:0; }
+.offer-list li::before { content:'â†’'; color:var(--cobalt); font-weight:700; flex-shrink:0; }
 .offer-badge { background:var(--cobalt); color:var(--banana); padding:40px; display:flex; flex-direction:column; gap:24px; }
 .bhead { display:flex; justify-content:space-between; align-items:center; font-family:'Lato',sans-serif; font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--banana); opacity:.8; }
 .gtag { background:var(--banana); color:var(--cobalt); padding:3px 8px; font-size:9px; }
@@ -712,14 +716,14 @@ footer.foot-fm .w sup { font-size:.5em; margin-left:2px; opacity:.6; }
 footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--banana); opacity:.5; }
 
 /* ================================================================
-   MOBILE — Best-in-class responsive (max-width: 640px)
+   MOBILE â€” Best-in-class responsive (max-width: 640px)
    ================================================================ */
 @media (max-width:640px) {
 
   /* --- Shared section spacing --- */
   .sec-pad { padding:72px 0; }
   .sec-header { margin-bottom:40px; }
-  /* Services has a border-top svc-list immediately after — kill the gap so borders don't double up */
+  /* Services has a border-top svc-list immediately after â€” kill the gap so borders don't double up */
   .services .sec-header { margin-bottom:0; }
   .stats,
   .services,
@@ -761,7 +765,7 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   .hero-manifesto .m-cell { padding:16px 14px; gap:10px; }
   .hero-manifesto .m-cell .body { font-size:16px; line-height:1.12; }
 
-  /* --- Stats — numbers were hitting 96px min on narrow screens --- */
+  /* --- Stats â€” numbers were hitting 96px min on narrow screens --- */
   .stat-row { padding:28px 0; }
   .stat-row .big { font-size:clamp(64px, 20vw, 96px); }
   .stat-row .desc { font-size:13px; }
@@ -782,7 +786,7 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   .lookbook-intro { margin-bottom:40px; gap:20px; }
   .lookbook-intro h4 { font-size:clamp(32px, 8vw, 56px); }
   .lookbook-intro .meta { min-width:unset; text-align:left; }
-  /* Phone scroll on mobile — use the same animation as free-month page (no overrides) */
+  /* Phone scroll on mobile â€” use the same animation as free-month page (no overrides) */
 
   /* --- Quote band --- */
   .quote-band { padding:80px 0; }
@@ -850,7 +854,7 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   .final-fm .pre { margin-bottom:32px; }
 }
 
-/* Extra small — 430px and below (iPhone SE, older devices) */
+/* Extra small â€” 430px and below (iPhone SE, older devices) */
 @media (max-width:430px) {
   .hero-wordmark { font-size:clamp(76px, 23vw, 110px); }
   .foot-grid { grid-template-columns:1fr; gap:32px; }
