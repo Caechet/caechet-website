@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'CÆCHET™ — A Retention Agency.',
@@ -18,7 +19,7 @@ export default function Home() {
         <div className="links">
           <a href="#work">Work</a>
           <a href="#process">Process</a>
-          <a href="#offer">Free Month</a>
+          <a href="/free-month">Free Month</a>
         </div>
         <a href={CALENDLY_URL} target="_blank" rel="noopener" className="cta">Book →</a>
       </nav>
@@ -93,21 +94,21 @@ export default function Home() {
           <div className="marquee-track">
             {[...Array(2)].map((_, i) => (
               <>
-                <img key={`hv-${i}`} src="/assets/brands/hoodville.jpg" alt="Hoodville" />
+                <img key={`hv-${i}`} src="/assets/brands/hoodville.png" alt="Hoodville" />
                 <span className="sep"></span>
-                <img key={`sb-${i}`} src="/assets/brands/scentbird.jpg" alt="Scentbird" />
+                <img key={`sb-${i}`} src="/assets/brands/scentbird.png" alt="Scentbird" />
                 <span className="sep"></span>
-                <img key={`tr-${i}`} src="/assets/brands/true-religion.jpg" alt="True Religion" />
+                <img key={`tr-${i}`} src="/assets/brands/true-religion.png" alt="True Religion" />
                 <span className="sep"></span>
-                <img key={`ko-${i}`} src="/assets/brands/konscious.jpg" alt="Konscious" />
+                <img key={`ko-${i}`} src="/assets/brands/konscious.png" alt="Konscious" />
                 <span className="sep"></span>
-                <img key={`lo-${i}`} src="/assets/brands/loops.jpg" alt="Loops" />
+                <img key={`lo-${i}`} src="/assets/brands/loops.png" alt="Loops" />
                 <span className="sep"></span>
-                <img key={`ly-${i}`} src="/assets/brands/lym.jpg" alt="Love Your Melon" />
+                <img key={`ly-${i}`} src="/assets/brands/lym.png" alt="Love Your Melon" />
                 <span className="sep"></span>
-                <img key={`lb-${i}`} src="/assets/brands/les-belles.jpg" alt="Les Belles" />
+                <img key={`lb-${i}`} src="/assets/brands/les-belles.png" alt="Les Belles" />
                 <span className="sep"></span>
-                <img key={`ry-${i}`} src="/assets/brands/rythm.jpg" alt="rythm" />
+                <img key={`ry-${i}`} src="/assets/brands/rythm.png" alt="rythm" />
                 <span className="sep"></span>
               </>
             ))}
@@ -526,7 +527,7 @@ export default function Home() {
             <div className="foot-col">
               <h4>The Offer</h4>
               <ul>
-                <li><a href="#offer">Free Month</a></li>
+                <li><a href="/free-month">Free Month</a></li>
                 <li><a href={CALENDLY_URL} target="_blank" rel="noopener">Book</a></li>
                 <li><a href="tel:7189307583">718.930.7583</a></li>
               </ul>
@@ -555,7 +556,7 @@ export default function Home() {
         </div>
       </footer>
 
-      <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
     </>
   )
 }
