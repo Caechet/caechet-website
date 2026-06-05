@@ -782,24 +782,23 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   .lookbook-intro { margin-bottom:40px; gap:20px; }
   .lookbook-intro h4 { font-size:clamp(32px, 8vw, 56px); }
   .lookbook-intro .meta { min-width:unset; text-align:left; }
-  /* Phone scroll: force mobile animation on BOTH pages.
-     Using .lookbook-card .phone .scroll (higher specificity than desktop .phone .scroll)
-     plus !important to guarantee the desktop 564px animation never runs on mobile. */
+  /* Phone scroll: starts 150px into image (past white email headers), scrolls to
+     the very bottom, bounces back. Clean topâ†’bottomâ†’top on BOTH pages. */
   .lookbook-card .phone .scroll {
-    animation: phoneScrollMobile 12s ease-in-out infinite alternate !important;
+    animation: phoneScrollMobile 16s ease-in-out infinite alternate !important;
   }
-  /* Per-card delays: all start 25â€“80% into the cycle so no card opens on a white email header.
-     With 12s alternate animation, -3s = 25% in (past headers), -9.6s = 80% in (near bottom). */
-  .lookbook-card:nth-child(1)  .phone .scroll { animation-delay: -3s   !important; }
-  .lookbook-card:nth-child(2)  .phone .scroll { animation-delay: -4s   !important; }
-  .lookbook-card:nth-child(3)  .phone .scroll { animation-delay: -5s   !important; }
-  .lookbook-card:nth-child(4)  .phone .scroll { animation-delay: -6s   !important; }
-  .lookbook-card:nth-child(5)  .phone .scroll { animation-delay: -7s   !important; }
-  .lookbook-card:nth-child(6)  .phone .scroll { animation-delay: -8s   !important; }
-  .lookbook-card:nth-child(7)  .phone .scroll { animation-delay: -9s   !important; }
-  .lookbook-card:nth-child(8)  .phone .scroll { animation-delay: -3.5s !important; }
-  .lookbook-card:nth-child(9)  .phone .scroll { animation-delay: -5.5s !important; }
-  .lookbook-card:nth-child(10) .phone .scroll { animation-delay: -7.5s !important; }
+  /* Stagger so all 10 phones are at different points */
+  /* All cards start mid-animation â€” visible content from the very first frame */
+  .lookbook-card:nth-child(1)  .phone .scroll { animation-delay: -4s  !important; }
+  .lookbook-card:nth-child(2)  .phone .scroll { animation-delay: -6s  !important; }
+  .lookbook-card:nth-child(3)  .phone .scroll { animation-delay: -8s  !important; }
+  .lookbook-card:nth-child(4)  .phone .scroll { animation-delay: -10s !important; }
+  .lookbook-card:nth-child(5)  .phone .scroll { animation-delay: -12s !important; }
+  .lookbook-card:nth-child(6)  .phone .scroll { animation-delay: -14s !important; }
+  .lookbook-card:nth-child(7)  .phone .scroll { animation-delay: -3s  !important; }
+  .lookbook-card:nth-child(8)  .phone .scroll { animation-delay: -5s  !important; }
+  .lookbook-card:nth-child(9)  .phone .scroll { animation-delay: -7s  !important; }
+  .lookbook-card:nth-child(10) .phone .scroll { animation-delay: -9s  !important; }
 
   /* --- Quote band --- */
   .quote-band { padding:80px 0; }
@@ -872,7 +871,7 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
    - Ends at the bottom of the image
    - animation-direction:alternate bounces it back up â€” no dwelling, no white gaps */
 @keyframes phoneScrollMobile {
-  0%   { transform: translateY(0); }                    /* top of email */
+  0%   { transform: translateY(-150px); }               /* 150px in â€” past white email headers */
   100% { transform: translateY(calc(-100% + 484px)); }  /* bottom of email */
 }
 
