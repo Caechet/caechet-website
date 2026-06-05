@@ -782,32 +782,9 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   .lookbook-intro { margin-bottom:40px; gap:20px; }
   .lookbook-intro h4 { font-size:clamp(32px, 8vw, 56px); }
   .lookbook-intro .meta { min-width:unset; text-align:left; }
-  /* Phone screen: dark gradient masks at top + bottom â€” fades the white email headers
-     into the phone bezel so no white is ever visible */
-  .phone .screen::before,
-  .phone .screen::after {
-    content:''; position:absolute; left:0; right:0; z-index:2; pointer-events:none;
-  }
-  .phone .screen::before {
-    top:0; height:110px;
-    background:linear-gradient(to bottom,
-      rgba(11,11,13,.97) 0%,
-      rgba(11,11,13,.7)  45%,
-      transparent        100%);
-    border-radius:32px 32px 0 0;
-  }
-  .phone .screen::after {
-    bottom:0; height:70px;
-    background:linear-gradient(to top, rgba(11,11,13,.9), transparent);
-    border-radius:0 0 32px 32px;
-  }
-
-  /* First card has no delay by default â€” give it -4s so it starts mid-scroll, not at white top */
-  .lookbook-card:first-child .phone .scroll { animation-delay:-4s; }
-
-  /* Phone scroll: percentage-based start skips ~25% of image top (covers white headers of any height) */
+  /* Phone scroll: top â†’ bottom â†’ top, never leaves the email image bounds */
   .phone .scroll {
-    animation: phoneScrollMobile 10s ease-in-out infinite alternate;
+    animation: phoneScrollMobile 12s ease-in-out infinite alternate;
   }
 
   /* --- Quote band --- */
@@ -881,8 +858,8 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
    - Ends at the bottom of the image
    - animation-direction:alternate bounces it back up â€” no dwelling, no white gaps */
 @keyframes phoneScrollMobile {
-  0%   { transform: translateY(-25%); }   /* skip top 25% â€” covers white email headers */
-  100% { transform: translateY(calc(-100% + 484px)); }  /* show bottom of email */
+  0%   { transform: translateY(0); }                    /* top of email */
+  100% { transform: translateY(calc(-100% + 484px)); }  /* bottom of email */
 }
 
 /* Extra small â€” 430px and below (iPhone SE, older devices) */
