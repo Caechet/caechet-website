@@ -734,15 +734,14 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   /* --- Nav (already handles mobile at 960px, fine-tune) --- */
   .nav { padding:12px 20px; gap:14px; }
 
-  /* --- Marquee: faster scroll + fix wrapping label --- */
-  .marquee-track { animation-duration:22s; }
+  /* --- Marquee: fast scroll + fix wrapping label --- */
+  .marquee-track { animation-duration:14s; gap:56px; }
   .marquee-label {
     flex-direction:column; gap:2px;
     padding:0 20px; margin-bottom:24px;
   }
   .marquee-label .right { display:none; }
-  .marquee-track img { height:34px; }
-  .marquee-track { gap:60px; }
+  .marquee-track img { height:32px; }
 
   /* --- Hero --- */
   .hero {
@@ -783,8 +782,14 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   .lookbook-intro { margin-bottom:40px; gap:20px; }
   .lookbook-intro h4 { font-size:clamp(32px, 8vw, 56px); }
   .lookbook-intro .meta { min-width:unset; text-align:left; }
-  /* Fix phone scroll: 564px was desktop screen height â€” mobile phone is 500px so screen â‰ˆ 484px */
-  .phone .scroll { animation-name:phoneScrollMobile; animation-duration:16s; }
+  /* Phone scroll: skip first 60px (white email headers), bounce continuously, no white gaps */
+  .phone .scroll {
+    animation-name: phoneScrollMobile;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
 
   /* --- Quote band --- */
   .quote-band { padding:80px 0; }
@@ -852,12 +857,16 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   .final-fm .pre { margin-bottom:32px; }
 }
 
-/* Extra small â€” 430px and below (iPhone SE, older devices) */
+/* Phone scroll keyframe for mobile:
+   - Starts at -60px (skips white email headers at top)
+   - Ends at the bottom of the image
+   - animation-direction:alternate bounces it back up â€” no dwelling, no white gaps */
 @keyframes phoneScrollMobile {
-  0%, 6%   { transform:translateY(0); }
-  46%, 54% { transform:translateY(calc(-100% + 484px)); }
-  94%, 100%{ transform:translateY(0); }
+  0%   { transform: translateY(-60px); }
+  100% { transform: translateY(calc(-100% + 484px)); }
 }
+
+/* Extra small â€” 430px and below (iPhone SE, older devices) */
 @media (max-width:430px) {
   .hero-wordmark { font-size:clamp(76px, 23vw, 110px); }
   .foot-grid { grid-template-columns:1fr; gap:32px; }
