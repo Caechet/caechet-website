@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Free 30-Day Trial. No Growth, No Pay.',
@@ -177,21 +178,21 @@ export default function FreeMonth() {
           <div className="marquee-track">
             {[...Array(2)].map((_, i) => (
               <>
-                <img key={`hv-${i}`} src="/assets/brands/hoodville.jpg" alt="Hoodville" />
+                <img key={`hv-${i}`} src="/assets/brands/hoodville.png" alt="Hoodville" />
                 <span className="sep"></span>
-                <img key={`sb-${i}`} src="/assets/brands/scentbird.jpg" alt="Scentbird" />
+                <img key={`sb-${i}`} src="/assets/brands/scentbird.png" alt="Scentbird" />
                 <span className="sep"></span>
-                <img key={`tr-${i}`} src="/assets/brands/true-religion.jpg" alt="True Religion" />
+                <img key={`tr-${i}`} src="/assets/brands/true-religion.png" alt="True Religion" />
                 <span className="sep"></span>
-                <img key={`ko-${i}`} src="/assets/brands/konscious.jpg" alt="Konscious" />
+                <img key={`ko-${i}`} src="/assets/brands/konscious.png" alt="Konscious" />
                 <span className="sep"></span>
-                <img key={`lo-${i}`} src="/assets/brands/loops.jpg" alt="Loops" />
+                <img key={`lo-${i}`} src="/assets/brands/loops.png" alt="Loops" />
                 <span className="sep"></span>
-                <img key={`ly-${i}`} src="/assets/brands/lym.jpg" alt="Love Your Melon" />
+                <img key={`ly-${i}`} src="/assets/brands/lym.png" alt="Love Your Melon" />
                 <span className="sep"></span>
-                <img key={`lb-${i}`} src="/assets/brands/les-belles.jpg" alt="Les Belles" />
+                <img key={`lb-${i}`} src="/assets/brands/les-belles.png" alt="Les Belles" />
                 <span className="sep"></span>
-                <img key={`ry-${i}`} src="/assets/brands/rythm.jpg" alt="rythm" />
+                <img key={`ry-${i}`} src="/assets/brands/rythm.png" alt="rythm" />
                 <span className="sep"></span>
               </>
             ))}
@@ -408,7 +409,7 @@ export default function FreeMonth() {
         </div>
       </footer>
 
-      <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
     </>
   )
 }
