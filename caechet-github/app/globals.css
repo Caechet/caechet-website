@@ -782,23 +782,7 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   .lookbook-intro { margin-bottom:40px; gap:20px; }
   .lookbook-intro h4 { font-size:clamp(32px, 8vw, 56px); }
   .lookbook-intro .meta { min-width:unset; text-align:left; }
-  /* Phone scroll: starts 150px into image (past white email headers), scrolls to
-     the very bottom, bounces back. Clean topâ†’bottomâ†’top on BOTH pages. */
-  .lookbook-card .phone .scroll {
-    animation: phoneScrollMobile 16s ease-in-out infinite alternate !important;
-  }
-  /* Stagger so all 10 phones are at different points */
-  /* All cards start mid-animation â€” visible content from the very first frame */
-  .lookbook-card:nth-child(1)  .phone .scroll { animation-delay: -4s  !important; }
-  .lookbook-card:nth-child(2)  .phone .scroll { animation-delay: -6s  !important; }
-  .lookbook-card:nth-child(3)  .phone .scroll { animation-delay: -8s  !important; }
-  .lookbook-card:nth-child(4)  .phone .scroll { animation-delay: -10s !important; }
-  .lookbook-card:nth-child(5)  .phone .scroll { animation-delay: -12s !important; }
-  .lookbook-card:nth-child(6)  .phone .scroll { animation-delay: -14s !important; }
-  .lookbook-card:nth-child(7)  .phone .scroll { animation-delay: -3s  !important; }
-  .lookbook-card:nth-child(8)  .phone .scroll { animation-delay: -5s  !important; }
-  .lookbook-card:nth-child(9)  .phone .scroll { animation-delay: -7s  !important; }
-  .lookbook-card:nth-child(10) .phone .scroll { animation-delay: -9s  !important; }
+  /* Phone scroll on mobile â€” use the same animation as free-month page (no overrides) */
 
   /* --- Quote band --- */
   .quote-band { padding:80px 0; }
@@ -864,15 +848,6 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   .final-fm { padding:80px 0 64px; }
   .final-fm h2 { font-size:clamp(64px, 18vw, 140px); }
   .final-fm .pre { margin-bottom:32px; }
-}
-
-/* Phone scroll keyframe for mobile:
-   - Starts at -60px (skips white email headers at top)
-   - Ends at the bottom of the image
-   - animation-direction:alternate bounces it back up â€” no dwelling, no white gaps */
-@keyframes phoneScrollMobile {
-  0%   { transform: translateY(-150px); }               /* 150px in â€” past white email headers */
-  100% { transform: translateY(calc(-100% + 484px)); }  /* bottom of email */
 }
 
 /* Extra small â€” 430px and below (iPhone SE, older devices) */
