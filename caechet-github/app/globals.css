@@ -105,8 +105,10 @@ svg { display:block; }
 }
 .nav .cta:hover { transform:translateY(-1px); }
 @media (max-width:960px) {
-  .nav { grid-template-columns:auto 1fr auto; padding:12px 24px; gap:20px; }
+  /* 2-column: wordmark left, CTA right — nothing in between */
+  .nav { grid-template-columns:1fr auto; padding:12px 24px; gap:16px; }
   .nav .ref-line, .nav .links { display:none; }
+  .nav .cta { width:auto; align-self:center; }
 }
 
 /* === HERO (home) === */

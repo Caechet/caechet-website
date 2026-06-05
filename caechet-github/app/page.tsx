@@ -25,20 +25,6 @@ export default function Home() {
 
       {/* HERO */}
       <header className="hero">
-        <div className="hero-top">
-          <div className="left-block">
-            <div className="stamp-row">
-              <span className="stamp cobalt">A Retention Agency</span>
-              <span className="stamp">For DTC Operators</span>
-            </div>
-          </div>
-          <div className="right-block">
-            <div className="stamp-row">
-              <span className="stamp">EST. 2025 // NYC // MIA</span>
-            </div>
-          </div>
-        </div>
-
         <div className="hero-center">
           <div className="hero-wordmark reveal d-1">Cæchet<sup>®</sup></div>
           <div className="hero-tagline reveal d-2">
