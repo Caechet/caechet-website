@@ -71,29 +71,24 @@ export default function FreeMonth() {
         <div className="wrap">
           <div className="sec-head">
             <div>
-              <div className="ref">§01 — Who You Work With</div>
-              <h2 style={{marginTop:'14px'}}>A dedicated team. <em>Not a queue.</em></h2>
+              <h2>A dedicated team. <em>Not a queue.</em></h2>
             </div>
             <span className="stamp">Founder-Led</span>
           </div>
           <div className="team-grid">
             <div className="team-cell">
-              <div className="n">N° 01</div>
               <div className="role">Daniel<br/>Monte</div>
               <div className="d">10-year retention operator. Built retention departments for 100+ DTC brands and agencies. You work with him directly.</div>
             </div>
             <div className="team-cell">
-              <div className="n">N° 02</div>
               <div className="role">Strategist</div>
               <div className="d">Maps your lifecycle, segments, and offer calendar to a revenue target — built around your brand, not a template.</div>
             </div>
             <div className="team-cell">
-              <div className="n">N° 03</div>
               <div className="role">Designer</div>
               <div className="d">On-brand email + SMS creative that looks like your store and converts like a landing page.</div>
             </div>
             <div className="team-cell">
-              <div className="n">N° 04</div>
               <div className="role">Copywriter</div>
               <div className="d">Words that sell without burning your list — the voice your customers actually want in their inbox.</div>
             </div>
@@ -106,28 +101,24 @@ export default function FreeMonth() {
         <div className="wrap">
           <div className="sec-head">
             <div>
-              <div className="ref">§02 — How The Month Works</div>
-              <h2 style={{marginTop:'14px'}}>Cold to compounding <em>in 30 days.</em></h2>
+              <h2>Cold to compounding <em>in 30 days.</em></h2>
             </div>
             <span className="stamp">No Risk</span>
           </div>
           <div className="step-list">
             <div className="step-row">
-              <div className="sn">01</div>
               <div>
                 <div className="st">Audit &amp; Plan.</div>
                 <div className="sd">We pull apart your account — deliverability, flows, segments, attribution — and build a tailored 30-day growth plan.</div>
               </div>
             </div>
             <div className="step-row">
-              <div className="sn">02</div>
               <div>
                 <div className="st">Build &amp; Launch.</div>
                 <div className="sd">Must-have flows go live, campaigns start shipping, creative + copy tuned to your brand. The backend the way it should&apos;ve been from day one.</div>
               </div>
             </div>
             <div className="step-row">
-              <div className="sn">03</div>
               <div>
                 <div className="st">Grow — or you don&apos;t pay.</div>
                 <div className="sd">We measure the lift against where you started. If email + SMS revenue doesn&apos;t grow in 30 days, the month is on us.</div>
@@ -143,8 +134,7 @@ export default function FreeMonth() {
           <div className="offer-card-fm">
             <div className="offer-in">
               <div>
-                <div className="ref" style={{color:'var(--cobalt)'}}>§03 — The Offer</div>
-                <h3 style={{marginTop:'16px'}}>Your first month, <em>on the house</em> if we don&apos;t deliver.</h3>
+                <h3>Your first month, <em>on the house</em> if we don&apos;t deliver.</h3>
                 <p className="offer-sub">Scale your backend with a senior operator and a full team — and only pay once you&apos;ve seen it work.</p>
                 <ul className="offer-list">
                   <li>Direct access to Daniel + your dedicated team</li>
@@ -171,7 +161,7 @@ export default function FreeMonth() {
       {/* MARQUEE */}
       <div className="marquee">
         <div className="marquee-label">
-          <span>§ Trusted by</span>
+          <span>Trusted by</span>
           <span className="right">8–9 figure operators · 70+ brands</span>
         </div>
         <div className="marquee-track-wrap">
@@ -205,13 +195,12 @@ export default function FreeMonth() {
         <div className="wrap">
           <div className="sec-header">
             <div className="left">
-              <span className="ref ref-cobalt">§ Selected Work</span>
-              <span className="mono up" style={{fontSize:'11px',color:'var(--cobalt)',opacity:.7}}>Four exhibits · four categories</span>
+              <h3>Selected Work</h3>
+              <span className="mono up" style={{fontSize:'11px',color:'var(--cobalt)',opacity:.7}}>Four brands · real results</span>
             </div>
-            <div className="right"><span className="stamp">Not For Display Only</span></div>
           </div>
           <div className="work-grid">
-            <article className="case" data-exhibit="EXHIBIT N° 01 / 04">
+            <article className="case">
               <div className="case-artifact">
                 <img src="/assets/case-artifacts/les-belles-takeover.jpg" alt="Les Belles Klaviyo inbox takeover dashboard" />
                 <span className="stamp-bl">Klaviyo · Inbox Takeover</span>
@@ -229,7 +218,7 @@ export default function FreeMonth() {
                 </div>
               </div>
             </article>
-            <article className="case" data-exhibit="EXHIBIT N° 02 / 04">
+            <article className="case">
               <div className="case-artifact">
                 <img src="/assets/case-artifacts/sweet-honey-attribution.jpg" alt="Sweet Honey Farm Klaviyo attribution dashboard" />
                 <span className="stamp-bl">Klaviyo · Attribution Summary</span>
@@ -247,7 +236,7 @@ export default function FreeMonth() {
                 </div>
               </div>
             </article>
-            <article className="case" data-exhibit="EXHIBIT N° 03 / 04">
+            <article className="case">
               <div className="case-artifact">
                 <img src="/assets/case-artifacts/upful-blends-klaviyo.jpg" alt="Upful Blends Klaviyo analytics dashboard" />
                 <span className="stamp-bl">Klaviyo · 60-Day Performance</span>
@@ -265,7 +254,7 @@ export default function FreeMonth() {
                 </div>
               </div>
             </article>
-            <article className="case" data-exhibit="EXHIBIT N° 04 / 04">
+            <article className="case">
               <div className="case-artifact">
                 <img src="/assets/case-artifacts/true-religion-2chainz.jpg" alt="True Religion 2 Chainz campaign" />
                 <span className="stamp-bl">Campaign · 2 Chainz</span>
@@ -290,13 +279,6 @@ export default function FreeMonth() {
       {/* LOOKBOOK */}
       <section className="lookbook" id="sends">
         <div className="wrap">
-          <div className="sec-header">
-            <div className="left">
-              <span className="ref">§ Selected Sends</span>
-              <span className="mono up" style={{fontSize:'11px'}}>Inbox receipts · last 90 days</span>
-            </div>
-            <div className="right"><span className="stamp">For Editorial Review</span></div>
-          </div>
           <div className="lookbook-intro">
             <h4>The inbox is the front door. <span className="alt">Make it land.</span></h4>
             <div className="meta">Recent sends across<br/>4 brands · 4 categories<b>10 of 200+</b></div>
@@ -305,18 +287,18 @@ export default function FreeMonth() {
         <div className="wrap">
           <div className="lookbook-track">
             {[
-              { img:'lym-monochrome', alt:'LYM Monochrome Collection', n:'001', copy:'The Monochrome Collection — head-to-pom, one seamless color', date:'03.18.26 · Drop' },
-              { img:'lb-set-season', alt:'Les Belles Set Season', n:'002', copy:'Set Season — the matching set moment is entirely yours', date:'05.14.26 · Collection' },
-              { img:'shf-running-shoe', alt:'Sweet Honey Farm Running Shoe', n:'003', copy:'The best running shoe you never had — for the operator', date:'02.21.26 · Product' },
-              { img:'ub-sea-elements', alt:'Upful Blends Sea Elements', n:'004', copy:'Sea Elements deep dive — 92 of 102 minerals, one capsule', date:'04.04.26 · Education' },
-              { img:'lym-mothers-day', alt:"LYM Mother's Day", n:'005', copy:'Hi Mom, we got you — gift card moment with LOVEMOM', date:'05.10.26 · Holiday' },
-              { img:'lb-vacation', alt:'Les Belles Vacation Ready Edit', n:'006', copy:'Pack This — the 5-piece travel trousseau, beach to bar', date:'05.18.26 · Edit' },
-              { img:'ub-heavy-no-more', alt:'Upful Blends Heavy No More', n:'007', copy:"Let the body flow — heavy, bloated, backed up? We got you.", date:'05.16.26 · Reset' },
-              { img:'shf-gear', alt:'Sweet Honey Farm Gear', n:'008', copy:"It's not just merch. It's a statement.", date:'02.06.26 · Brand' },
-              { img:'lb-spring-staples', alt:'Les Belles Spring Staples', n:'009', copy:'Staple Season — your spring wardrobe, simplified', date:'05.04.26 · Edit' },
-              { img:'shf-engine', alt:'Sweet Honey Farm You Are The Engine', n:'010', copy:'You are the engine. These are the tires.', date:'01.23.26 · Hero' },
+              { img:'lym-monochrome', alt:'LYM Monochrome Collection', copy:'The Monochrome Collection — head-to-pom, one seamless color', date:'03.18.26 · Drop' },
+              { img:'lb-set-season', alt:'Les Belles Set Season', copy:'Set Season — the matching set moment is entirely yours', date:'05.14.26 · Collection' },
+              { img:'shf-running-shoe', alt:'Sweet Honey Farm Running Shoe', copy:'The best running shoe you never had — for the operator', date:'02.21.26 · Product' },
+              { img:'ub-sea-elements', alt:'Upful Blends Sea Elements', copy:'Sea Elements deep dive — 92 of 102 minerals, one capsule', date:'04.04.26 · Education' },
+              { img:'lym-mothers-day', alt:"LYM Mother's Day", copy:'Hi Mom, we got you — gift card moment with LOVEMOM', date:'05.10.26 · Holiday' },
+              { img:'lb-vacation', alt:'Les Belles Vacation Ready Edit', copy:'Pack This — the 5-piece travel trousseau, beach to bar', date:'05.18.26 · Edit' },
+              { img:'ub-heavy-no-more', alt:'Upful Blends Heavy No More', copy:"Let the body flow — heavy, bloated, backed up? We got you.", date:'05.16.26 · Reset' },
+              { img:'shf-gear', alt:'Sweet Honey Farm Gear', copy:"It's not just merch. It's a statement.", date:'02.06.26 · Brand' },
+              { img:'lb-spring-staples', alt:'Les Belles Spring Staples', copy:'Staple Season — your spring wardrobe, simplified', date:'05.04.26 · Edit' },
+              { img:'shf-engine', alt:'Sweet Honey Farm You Are The Engine', copy:'You are the engine. These are the tires.', date:'01.23.26 · Hero' },
             ].map((card) => (
-              <div key={card.n} className="lookbook-card">
+              <div key={card.img} className="lookbook-card">
                 <div className="phone">
                   <div className="screen">
                     <div className="status">
@@ -327,7 +309,6 @@ export default function FreeMonth() {
                   </div>
                 </div>
                 <div className="meta">
-                  <div className="index">N° {card.n} / 10</div>
                   <div className="campaign">{card.copy}</div>
                   <div className="date">{card.date}</div>
                 </div>
@@ -344,16 +325,8 @@ export default function FreeMonth() {
       {/* FOUNDER */}
       <section className="founder" id="founder">
         <div className="wrap">
-          <div className="sec-header">
-            <div className="left">
-              <span className="ref">§ The Operator</span>
-              <span className="mono up" style={{fontSize:'11px'}}>Every angle of the game</span>
-            </div>
-            <div className="right"><span className="stamp">REF: DM-OPS / 11Y</span></div>
-          </div>
           <div className="founder-grid">
             <div className="name-block">
-              <div className="ref">Subject N° 01</div>
               <div className="name-row">
                 <div className="name">Daniel<br/>Monte<sup>™</sup></div>
                 <div className="founder-photo-wrap">
