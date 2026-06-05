@@ -242,7 +242,7 @@ svg { display:block; }
 .services { background:var(--banana); padding:120px 0; position:relative; overflow:hidden; }
 .svc-list { display:flex; flex-direction:column; border-top:2px solid var(--cobalt); }
 .svc-row {
-  position:relative; display:grid; grid-template-columns:90px 1fr auto;
+  position:relative; display:grid; grid-template-columns:1fr auto;
   gap:40px; align-items:center; padding:38px 24px; border-bottom:2px solid var(--cobalt);
   cursor:default; overflow:hidden; transition:padding-left .35s cubic-bezier(.2,.7,.2,1);
 }
@@ -398,7 +398,7 @@ svg { display:block; }
   letter-spacing:.18em; text-transform:uppercase; color:var(--banana); opacity:.75; flex-wrap:wrap;
 }
 .lookbook-foot .scroll-hint { display:inline-flex; align-items:center; gap:14px; }
-.lookbook-foot .scroll-hint::after { content:'â†¦'; font-family:'Inter',sans-serif; font-weight:900; font-size:18px; }
+.lookbook-foot .scroll-hint::after { content:'↦'; font-family:'Inter',sans-serif; font-weight:900; font-size:18px; }
 @media (max-width:720px) {
   .lookbook-track { padding:24px 24px 48px; margin:0 -24px; }
   .phone { width:240px; height:500px; }
@@ -528,9 +528,8 @@ footer { background:var(--cobalt); color:var(--banana); padding:80px 0 28px; }
 .foot-bot { padding-top:28px; border-top:1px solid rgba(252,241,184,.22); display:flex; justify-content:space-between; flex-wrap:wrap; gap:18px; font-family:'Lato', sans-serif; font-size:10px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--banana); opacity:.7; }
 @media (max-width:840px) { .foot-grid { grid-template-columns:1fr 1fr; } }
 
-/* Home page lookbook: reverse direction so animation starts from bottom of email
-   (content-rich) instead of top (white headers). Applies on all screen sizes. */
-.lookbook-home .phone .scroll { animation-direction: reverse; }
+/* === Mobile Manifesto Section === */
+.manifesto-mobile { display:none; } /* hidden on desktop — shown via mobile CSS below */
 
 /* === Helpers === */
 .reveal { opacity:0; transform:translateY(20px); animation:reveal 1s cubic-bezier(.2,.7,.2,1) forwards; }
@@ -684,7 +683,7 @@ footer { background:var(--cobalt); color:var(--banana); padding:80px 0 28px; }
 .offer-sub { font-size:15px; line-height:1.6; color:var(--ink); margin-top:20px; opacity:.8; max-width:460px; }
 .offer-list { list-style:none; display:flex; flex-direction:column; gap:0; margin-top:32px; border-top:1px solid var(--cobalt); }
 .offer-list li { padding:14px 0; border-bottom:1px solid rgba(32,72,200,.15); font-size:15px; color:var(--ink); font-weight:500; display:flex; align-items:flex-start; gap:10px; }
-.offer-list li::before { content:'â†’'; color:var(--cobalt); font-weight:700; flex-shrink:0; }
+.offer-list li::before { content:'→'; color:var(--cobalt); font-weight:700; flex-shrink:0; }
 .offer-badge { background:var(--cobalt); color:var(--banana); padding:40px; display:flex; flex-direction:column; gap:24px; }
 .bhead { display:flex; justify-content:space-between; align-items:center; font-family:'Lato',sans-serif; font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--banana); opacity:.8; }
 .gtag { background:var(--banana); color:var(--cobalt); padding:3px 8px; font-size:9px; }
@@ -716,14 +715,14 @@ footer.foot-fm .w sup { font-size:.5em; margin-left:2px; opacity:.6; }
 footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--banana); opacity:.5; }
 
 /* ================================================================
-   MOBILE â€” Best-in-class responsive (max-width: 640px)
+   MOBILE — Best-in-class responsive (max-width: 640px)
    ================================================================ */
 @media (max-width:640px) {
 
   /* --- Shared section spacing --- */
   .sec-pad { padding:72px 0; }
   .sec-header { margin-bottom:40px; }
-  /* Services has a border-top svc-list immediately after â€” kill the gap so borders don't double up */
+  /* Services has a border-top svc-list immediately after — kill the gap so borders don't double up */
   .services .sec-header { margin-bottom:0; }
   .stats,
   .services,
@@ -765,7 +764,7 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   .hero-manifesto .m-cell { padding:16px 14px; gap:10px; }
   .hero-manifesto .m-cell .body { font-size:16px; line-height:1.12; }
 
-  /* --- Stats â€” numbers were hitting 96px min on narrow screens --- */
+  /* --- Stats — numbers were hitting 96px min on narrow screens --- */
   .stat-row { padding:28px 0; }
   .stat-row .big { font-size:clamp(64px, 20vw, 96px); }
   .stat-row .desc { font-size:13px; }
@@ -786,7 +785,41 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   .lookbook-intro { margin-bottom:40px; gap:20px; }
   .lookbook-intro h4 { font-size:clamp(32px, 8vw, 56px); }
   .lookbook-intro .meta { min-width:unset; text-align:left; }
-  /* Phone scroll on mobile â€” use the same animation as free-month page (no overrides) */
+  /* Home page only: reverse so animation starts from bottom (content) not top (white headers) */
+  .lookbook-home .phone .scroll { animation-direction: reverse; }
+
+  /* Hide desktop manifesto from hero on mobile */
+  .hero-manifesto, .hero-manifesto-label { display:none; }
+
+  /* Mobile manifesto — its own section */
+  .manifesto-mobile {
+    display:block;
+    background:var(--banana);
+    border-top:2px solid var(--cobalt);
+    border-bottom:2px solid var(--cobalt);
+  }
+  .manifesto-mobile-header {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:12px 20px;
+    border-bottom:1px solid var(--cobalt);
+    font-family:'Lato',sans-serif; font-size:10px; font-weight:600;
+    letter-spacing:.18em; text-transform:uppercase; color:var(--cobalt);
+  }
+  .manifesto-mobile-header span:last-child { opacity:.55; }
+  .manifesto-mobile-item {
+    padding:18px 20px;
+    border-bottom:1px solid var(--cobalt);
+  }
+  .manifesto-mobile-item:last-child { border-bottom:none; }
+  .manifesto-mobile-item .stamp.tag { margin-bottom:10px; display:inline-block; }
+  .manifesto-mobile-body {
+    font-family:'Inter',sans-serif; font-weight:900;
+    font-size:clamp(22px, 6.5vw, 30px);
+    letter-spacing:-.04em; line-height:.95;
+    text-transform:uppercase; color:var(--cobalt);
+  }
+  .manifesto-mobile-body .alt { color:var(--ink); }
+  .manifesto-mobile-body .strike { text-decoration:line-through; text-decoration-thickness:.07em; opacity:.5; }
 
   /* --- Quote band --- */
   .quote-band { padding:80px 0; }
@@ -854,7 +887,7 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   .final-fm .pre { margin-bottom:32px; }
 }
 
-/* Extra small â€” 430px and below (iPhone SE, older devices) */
+/* Extra small — 430px and below (iPhone SE, older devices) */
 @media (max-width:430px) {
   .hero-wordmark { font-size:clamp(76px, 23vw, 110px); }
   .foot-grid { grid-template-columns:1fr; gap:32px; }
