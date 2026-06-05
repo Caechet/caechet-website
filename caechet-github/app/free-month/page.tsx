@@ -277,7 +277,7 @@ export default function FreeMonth() {
       </section>
 
       {/* LOOKBOOK */}
-      <section className="lookbook" id="sends">
+      <section className="lookbook lookbook-fm" id="sends">
         <div className="wrap">
           <div className="lookbook-intro">
             <h4>The inbox is the front door. <span className="alt">Make it land.</span></h4>

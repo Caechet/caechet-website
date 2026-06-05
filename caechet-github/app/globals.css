@@ -786,8 +786,9 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   .lookbook-intro { margin-bottom:40px; gap:20px; }
   .lookbook-intro h4 { font-size:clamp(32px, 8vw, 56px); }
   .lookbook-intro .meta { min-width:unset; text-align:left; }
-  /* Home page only: reverse so animation starts from bottom (content) not top (white headers) */
+  /* Home + Free Month: reverse so animation starts from bottom (content) not top (white headers) */
   .lookbook-home .phone .scroll { animation-direction: reverse; }
+  .lookbook-fm .phone .scroll { animation-direction: reverse; }
 
   /* Hide desktop manifesto from hero on mobile */
   .hero-manifesto, .hero-manifesto-label { display:none; }
