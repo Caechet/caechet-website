@@ -308,7 +308,7 @@ export default function Home() {
                       <span className="time">9:41</span>
                       <span className="icons"><span></span><span></span><span className="battery"></span></span>
                     </div>
-                    <div className="scroll"><img src={`/assets/emails/${card.img}.jpg`} alt={card.alt} /></div>
+                    <div className="scroll"><img src={`/assets/emails/${card.img}.jpg`} alt={card.alt} loading="eager" decoding="async" /></div>
                   </div>
                 </div>
                 <div className="meta">
