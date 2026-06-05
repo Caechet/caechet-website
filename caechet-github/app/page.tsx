@@ -273,7 +273,7 @@ export default function Home() {
       </section>
 
       {/* LOOKBOOK */}
-      <section className="lookbook" id="sends">
+      <section className="lookbook lookbook-home" id="sends">
         <div className="wrap">
           <div className="sec-header">
             <div className="left">
