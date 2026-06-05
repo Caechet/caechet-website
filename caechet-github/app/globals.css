@@ -788,17 +788,18 @@ footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weigh
   .lookbook-card .phone .scroll {
     animation: phoneScrollMobile 12s ease-in-out infinite alternate !important;
   }
-  /* Re-set all per-card delays scaled for the 12s mobile animation */
-  .lookbook-card:nth-child(1)  .phone .scroll { animation-delay:  0s  !important; }
-  .lookbook-card:nth-child(2)  .phone .scroll { animation-delay: -2s  !important; }
-  .lookbook-card:nth-child(3)  .phone .scroll { animation-delay: -4s  !important; }
-  .lookbook-card:nth-child(4)  .phone .scroll { animation-delay: -6s  !important; }
-  .lookbook-card:nth-child(5)  .phone .scroll { animation-delay: -8s  !important; }
-  .lookbook-card:nth-child(6)  .phone .scroll { animation-delay: -10s !important; }
-  .lookbook-card:nth-child(7)  .phone .scroll { animation-delay: -1s  !important; }
-  .lookbook-card:nth-child(8)  .phone .scroll { animation-delay: -3s  !important; }
-  .lookbook-card:nth-child(9)  .phone .scroll { animation-delay: -5s  !important; }
-  .lookbook-card:nth-child(10) .phone .scroll { animation-delay: -7s  !important; }
+  /* Per-card delays: all start 25â€“80% into the cycle so no card opens on a white email header.
+     With 12s alternate animation, -3s = 25% in (past headers), -9.6s = 80% in (near bottom). */
+  .lookbook-card:nth-child(1)  .phone .scroll { animation-delay: -3s   !important; }
+  .lookbook-card:nth-child(2)  .phone .scroll { animation-delay: -4s   !important; }
+  .lookbook-card:nth-child(3)  .phone .scroll { animation-delay: -5s   !important; }
+  .lookbook-card:nth-child(4)  .phone .scroll { animation-delay: -6s   !important; }
+  .lookbook-card:nth-child(5)  .phone .scroll { animation-delay: -7s   !important; }
+  .lookbook-card:nth-child(6)  .phone .scroll { animation-delay: -8s   !important; }
+  .lookbook-card:nth-child(7)  .phone .scroll { animation-delay: -9s   !important; }
+  .lookbook-card:nth-child(8)  .phone .scroll { animation-delay: -3.5s !important; }
+  .lookbook-card:nth-child(9)  .phone .scroll { animation-delay: -5.5s !important; }
+  .lookbook-card:nth-child(10) .phone .scroll { animation-delay: -7.5s !important; }
 
   /* --- Quote band --- */
   .quote-band { padding:80px 0; }
