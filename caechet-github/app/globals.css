@@ -398,7 +398,7 @@ svg { display:block; }
   letter-spacing:.18em; text-transform:uppercase; color:var(--banana); opacity:.75; flex-wrap:wrap;
 }
 .lookbook-foot .scroll-hint { display:inline-flex; align-items:center; gap:14px; }
-.lookbook-foot .scroll-hint::after { content:'↦'; font-family:'Inter',sans-serif; font-weight:900; font-size:18px; }
+.lookbook-foot .scroll-hint::after { content:'â†¦'; font-family:'Inter',sans-serif; font-weight:900; font-size:18px; }
 @media (max-width:720px) {
   .lookbook-track { padding:24px 24px 48px; margin:0 -24px; }
   .phone { width:240px; height:500px; }
@@ -680,7 +680,7 @@ footer { background:var(--cobalt); color:var(--banana); padding:80px 0 28px; }
 .offer-sub { font-size:15px; line-height:1.6; color:var(--ink); margin-top:20px; opacity:.8; max-width:460px; }
 .offer-list { list-style:none; display:flex; flex-direction:column; gap:0; margin-top:32px; border-top:1px solid var(--cobalt); }
 .offer-list li { padding:14px 0; border-bottom:1px solid rgba(32,72,200,.15); font-size:15px; color:var(--ink); font-weight:500; display:flex; align-items:flex-start; gap:10px; }
-.offer-list li::before { content:'→'; color:var(--cobalt); font-weight:700; flex-shrink:0; }
+.offer-list li::before { content:'â†’'; color:var(--cobalt); font-weight:700; flex-shrink:0; }
 .offer-badge { background:var(--cobalt); color:var(--banana); padding:40px; display:flex; flex-direction:column; gap:24px; }
 .bhead { display:flex; justify-content:space-between; align-items:center; font-family:'Lato',sans-serif; font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--banana); opacity:.8; }
 .gtag { background:var(--banana); color:var(--cobalt); padding:3px 8px; font-size:9px; }
@@ -710,3 +710,141 @@ footer.foot-fm .wrap { display:flex; justify-content:space-between; align-items:
 footer.foot-fm .w { font-family:'Inter',sans-serif; font-weight:900; font-size:22px; letter-spacing:-.04em; color:var(--banana); }
 footer.foot-fm .w sup { font-size:.5em; margin-left:2px; opacity:.6; }
 footer.foot-fm .meta { font-family:'Lato',sans-serif; font-size:10px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--banana); opacity:.5; }
+
+/* ================================================================
+   MOBILE â€” Best-in-class responsive (max-width: 640px)
+   ================================================================ */
+@media (max-width:640px) {
+
+  /* --- Shared section spacing --- */
+  .sec-pad { padding:72px 0; }
+  .sec-header { margin-bottom:48px; }
+  .stats,
+  .services,
+  .receipts,
+  .lookbook,
+  .quote-band,
+  .founder,
+  .process,
+  .filter,
+  .offer { padding:72px 0; }
+
+  /* --- Nav (already handles mobile at 960px, fine-tune) --- */
+  .nav { padding:12px 20px; gap:14px; }
+
+  /* --- Hero --- */
+  .hero {
+    min-height:100vh;
+    min-height:100svh; /* accounts for mobile browser chrome */
+    padding:20px 20px 24px;
+  }
+  .hero-center { padding:40px 0 28px; }
+  /* Bigger, more dramatic wordmark on mobile */
+  .hero-wordmark { font-size:clamp(88px, 25vw, 180px); }
+  .hero-tagline {
+    margin-top:16px; gap:12px;
+    font-size:clamp(14px, 4.5vw, 22px);
+  }
+  .hero-tagline .rule { width:clamp(28px, 7vw, 60px); }
+  .hero-manifesto-label { padding:10px 0 8px; }
+  .hero-manifesto .m-cell { padding:16px 14px; gap:10px; }
+  .hero-manifesto .m-cell .body { font-size:16px; line-height:1.12; }
+
+  /* --- Stats â€” numbers were hitting 96px min on narrow screens --- */
+  .stat-row { padding:28px 0; }
+  .stat-row .big { font-size:clamp(64px, 20vw, 96px); }
+  .stat-row .desc { font-size:13px; }
+
+  /* --- Services --- */
+  .svc-name { font-size:clamp(32px, 9vw, 52px); gap:10px; }
+  .svc-name .desc { font-size:13px; max-width:100%; }
+  .svc-row { padding:22px 16px; }
+
+  /* --- Work / Receipts --- */
+  .case .case-inner { padding:24px 20px; }
+  .case .name { font-size:clamp(36px, 10vw, 52px); }
+  .case .case-stats { grid-template-columns:repeat(2,1fr); gap:10px; }
+  .case-artifact { max-height:200px; }
+
+  /* --- Lookbook --- */
+  .lookbook { padding:72px 0 80px; }
+  .lookbook-intro { margin-bottom:40px; gap:20px; }
+  .lookbook-intro h4 { font-size:clamp(32px, 8vw, 56px); }
+  .lookbook-intro .meta { min-width:unset; text-align:left; }
+
+  /* --- Quote band --- */
+  .quote-band { padding:80px 0; }
+  .quote-band .quote-body { font-size:clamp(32px, 9vw, 56px); line-height:1.0; }
+  .quote-band .credit { margin-top:40px; }
+
+  /* --- Founder --- */
+  .founder .name { font-size:clamp(56px, 16vw, 100px); }
+  .founder .name-block { margin-bottom:32px; }
+
+  /* --- Process --- */
+  .step { padding:26px 0; gap:12px; }
+  .step .name { font-size:clamp(32px, 9vw, 52px); }
+  .step .ord-stack .n { font-size:38px; }
+
+  /* --- Filter --- */
+  .filter-col { padding:32px 20px; }
+  .filter-col h3 { font-size:clamp(30px, 8vw, 50px); }
+  .filter-col li { padding:13px 0; font-size:14px; }
+
+  /* --- Offer --- */
+  .offer h2 { font-size:clamp(36px, 10vw, 72px); }
+  .offer-grid { margin-top:56px; gap:32px; }
+  .offer-card { padding:28px 20px; }
+  .offer-card .head { font-size:28px; }
+  .offer-card a.btn { padding:16px 18px; }
+
+  /* --- Final / Book --- */
+  .final { padding:88px 0 72px; }
+  .final h2 { font-size:clamp(88px, 26vw, 200px); }
+  .final .sub { font-size:14px; }
+  .cal-frame { margin-top:36px; border-width:2px; }
+
+  /* --- Footer --- */
+  footer { padding:56px 0 24px; }
+  .foot-word { font-size:clamp(36px, 8vw, 72px); margin-bottom:32px; }
+  .foot-bot { font-size:9px; gap:10px; }
+
+  /* --- Free Month: Hero --- */
+  .hero-fm { padding:56px 0 48px; }
+  .hero-fm h1 { font-size:clamp(34px, 9vw, 58px); line-height:.95; }
+  .hero-sub { font-size:15px; margin-top:20px; }
+  .hero-cta-row { gap:14px; margin-top:28px; }
+  .btn { padding:14px 18px; font-size:11px; }
+
+  /* --- Free Month: Guarantee --- */
+  .guarantee { padding:72px 0; }
+  .guarantee .big { font-size:clamp(46px, 14vw, 96px); }
+
+  /* --- Free Month: Sections --- */
+  .sec { padding:72px 0; }
+  .sec-head { padding-bottom:32px; margin-bottom:40px; }
+  .sec-head h2 { font-size:clamp(30px, 9vw, 56px); }
+
+  /* --- Free Month: Steps --- */
+  .step-row .st { font-size:clamp(22px, 6vw, 36px); }
+
+  /* --- Free Month: Offer badge --- */
+  .pct { font-size:60px; }
+  .offer-in > div:first-child { padding:36px 24px; }
+
+  /* --- Free Month: Final --- */
+  .final-fm { padding:80px 0 64px; }
+  .final-fm h2 { font-size:clamp(64px, 18vw, 140px); }
+  .final-fm .pre { margin-bottom:32px; }
+}
+
+/* Extra small â€” 430px and below (iPhone SE, older devices) */
+@media (max-width:430px) {
+  .hero-wordmark { font-size:clamp(76px, 23vw, 110px); }
+  .foot-grid { grid-template-columns:1fr; gap:32px; }
+  .team-grid { grid-template-columns:1fr; }
+  .team-cell { border-right:none !important; }
+  .team-cell:not(:last-child) { border-bottom:2px solid var(--cobalt) !important; }
+  .hero-manifesto .m-cell .body { font-size:15px; }
+  .svc-name .desc { display:none; } /* hide service descriptions on very small screens */
+}
