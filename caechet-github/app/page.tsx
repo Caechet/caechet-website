@@ -277,17 +277,14 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-header">
             <div className="left">
-              <span className="ref">§04 — Selected Sends</span>
+              <span className="ref">§ Selected Sends</span>
               <span className="mono up" style={{fontSize:'11px'}}>Inbox receipts · last 90 days</span>
             </div>
             <div className="right"><span className="stamp">For Editorial Review</span></div>
           </div>
           <div className="lookbook-intro">
             <h4>The inbox is the front door. <span className="alt">Make it land.</span></h4>
-            <div className="meta">
-              Recent sends across<br/>4 brands · 4 categories
-              <b>10 of 200+</b>
-            </div>
+            <div className="meta">Recent sends across<br/>4 brands · 4 categories<b>10 of 200+</b></div>
           </div>
         </div>
         <div className="wrap">
