@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: "You're Booked. | Cæchet™",
@@ -9,6 +10,16 @@ export const metadata: Metadata = {
 export default function ThankYou() {
   return (
     <>
+      {/* Google Ads Conversion — fires when someone lands on /thank-you after booking */}
+      <Script id="gads-conversion" strategy="afterInteractive">
+        {`
+          if (typeof gtag === 'function') {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-18226556683/FJ4fCOmW5LscEIvejPND'
+            });
+          }
+        `}
+      </Script>
       {/* NAV */}
       <nav className="nav-fm">
         <div className="nav-in">
