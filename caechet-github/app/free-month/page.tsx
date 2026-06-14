@@ -6,8 +6,6 @@ export const metadata: Metadata = {
   description: 'If we don\'t grow your email and SMS revenue in 30 days, you don\'t pay. Built for DTC brands doing $50K+/mo.',
 }
 
-const CALENDLY_URL = 'https://calendly.com/dxniel-monte/introductory-call-caechet'
-const CALENDLY_EMBED = `${CALENDLY_URL}?hide_gdpr_banner=1&background_color=fcf1b8&text_color=0a0a0a&primary_color=2048c8`
 
 export default function FreeMonth() {
   return (
@@ -362,13 +360,9 @@ export default function FreeMonth() {
         <div className="wrap">
           <span className="pre">— Let&apos;s Scale Your Backend —</span>
           <h2>Start your<br/><em>free month.</em></h2>
-          <p className="sub">The way it should have been built from day one. Grab a time below and we&apos;ll map your 30 days.</p>
+          <p className="sub">The way it should have been built from day one. Fill out the form below and we&apos;ll map your 30 days.</p>
           <div className="cal-frame">
-            <div
-              className="calendly-inline-widget"
-              data-url={CALENDLY_EMBED}
-              style={{minWidth:'320px', height:'700px'}}
-            ></div>
+            <div data-tf-live="01KV3PW1V2W52XM0TY0SZDYYFC"></div>
           </div>
           <div className="fine">GROW IN 30 DAYS OR YOU DON&apos;T PAY</div>
         </div>
@@ -382,7 +376,7 @@ export default function FreeMonth() {
         </div>
       </footer>
 
-      <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
+      <Script src="https://embed.typeform.com/next/embed.js" strategy="lazyOnload" />
     </>
   )
 }
