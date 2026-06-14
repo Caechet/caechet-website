@@ -360,12 +360,12 @@ export default function FreeMonth() {
         <div className="wrap">
           <span className="pre">— Let&apos;s Scale Your Backend —</span>
           <h2>Start your<br/><em>free month.</em></h2>
-          <p className="sub">The way it should have been built from day one. Grab a time below and we&apos;ll map your 30 days.</p>
+          <p className="sub">The way it should have been built from day one. Fill out the form below and we&apos;ll map your 30 days.</p>
           <div className="cal-frame">
             <div
-              className="calendly-inline-widget"
-              data-url="https://calendly.com/d/dv3q-4pf-py3?background_color=f5e280"
-              style={{minWidth:'320px', height:'700px'}}
+              data-tf-live="01KV3PW1V2W52XM0TY0SZDYYFC"
+              data-tf-hide-headers
+              data-tf-initialize-in-viewport
             ></div>
           </div>
           <div className="fine">GROW IN 30 DAYS OR YOU DON&apos;T PAY</div>
@@ -380,7 +380,7 @@ export default function FreeMonth() {
         </div>
       </footer>
 
-      <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
+      <Script src="https://embed.typeform.com/next/embed.js" strategy="lazyOnload" />
     </>
   )
 }
