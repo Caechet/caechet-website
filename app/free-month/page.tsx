@@ -15,7 +15,7 @@ export default function FreeMonth() {
       {/* NAV */}
       <nav className="nav-fm">
         <div className="nav-in">
-          <a href="/" className="word">Cæchet<sup>®</sup></a>
+          <a href="/" className="word">Caechet<sup>®</sup></a>
           <a href="#book" className="cta">Start free month →</a>
         </div>
       </nav>
@@ -47,7 +47,7 @@ export default function FreeMonth() {
             <div className="video-frame">
               <iframe
                 src="https://www.youtube.com/embed/QpALrreLu2s?si=81-E26ZOHSOtFwlk"
-                title="Cæchet — Free Month"
+                title="Caechet — Free Month"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
@@ -357,7 +357,7 @@ export default function FreeMonth() {
               <div className="name-row">
                 <div className="name">Daniel<br/>Monte<sup>™</sup></div>
                 <div className="founder-photo-wrap">
-                  <img className="founder-photo" src="/assets/daniel-monte-cutout.png" alt="Daniel Monte, Founder of Cæchet" />
+                  <img className="founder-photo" src="/assets/daniel-monte-cutout.png" alt="Daniel Monte, Founder of Caechet" />
                 </div>
               </div>
               <div className="role">Founder · 11 yrs · NYC</div>
@@ -404,7 +404,7 @@ export default function FreeMonth() {
       {/* FOOTER */}
       <footer className="foot-fm">
         <div className="wrap">
-          <span className="w">Cæchet<sup>®</sup></span>
+          <span className="w">Caechet<sup>®</sup></span>
           <div className="meta">A Retention Agency · Est. 2025 · NYC // MIA</div>
         </div>
       </footer>
