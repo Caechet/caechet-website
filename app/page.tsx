@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'CÆCHET™ — A Retention Agency.',
-  description: 'Cæchet is a retention-first marketing agency. Email, SMS, subscriptions, loyalty — for DTC brands doing $1M–$50M+.',
+  title: 'Caechet™ — A Retention Agency.', 
+    description: 'Caechet is a retention-first marketing agency. Email, SMS, subscriptions, loyalty — for DTC brands doing $1M–$50M+.',
 }
 
 const CALENDLY_URL = 'https://calendly.com/dxniel-monte/introductory-call-caechet'
@@ -14,7 +14,7 @@ export default function Home() {
     <>
       {/* NAV */}
       <nav className="nav">
-        <a href="#" className="word">Cæchet<span className="tm">®</span></a>
+        <a href="#" className="word">Caechet<span className="tm">®</span></a>
         <div className="links">
           <a href="#work">Work</a>
           <a href="#process">Process</a>
@@ -40,7 +40,7 @@ export default function Home() {
         </div>
 
         <div className="hero-center">
-          <div className="hero-wordmark reveal d-1">Cæchet<sup>®</sup></div>
+          <div className="hero-wordmark reveal d-1">Caechet<sup>®</sup></div>
           <div className="hero-tagline reveal d-2">
             <span className="rule"></span>
             <span className="phrase">Retain or <span className="alt">die.</span></span>
@@ -319,7 +319,7 @@ export default function Home() {
               <div className="name-row">
                 <div className="name">Daniel<br/>Monte<sup>™</sup></div>
                 <div className="founder-photo-wrap">
-                  <img className="founder-photo" src="/assets/daniel-monte-cutout.png" alt="Daniel Monte, Founder of Cæchet" />
+                  <img className="founder-photo" src="/assets/daniel-monte-cutout.png" alt="Daniel Monte, Founder of Caechet" />
                 </div>
               </div>
               <div className="role">Founder · 11 yrs · NYC</div>
@@ -449,7 +449,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer>
         <div className="wrap">
-          <div className="foot-word">Cæchet<sup>®</sup></div>
+          <div className="foot-word">Caechet<sup>®</sup></div>
           <div className="foot-grid">
             <div className="foot-col">
               <h4>The Work</h4>
@@ -486,7 +486,7 @@ export default function Home() {
           </div>
           <div className="foot-bot">
             <span>Stay dangerous · Be human</span>
-            <span>© 2026 Cæchet™ · A Retention Agency</span>
+            <span>© 2026 Caechet™ · A Retention Agency</span>
           </div>
         </div>
       </footer>
